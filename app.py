@@ -126,26 +126,7 @@ if "quiz" in st.session_state:
 )
             
  
-if "quiz" in st.session_state:
-    st.markdown(f"### Quiz: {st.session_state.quiz_topic}")
-    st.write(
-        "Choose the sentence that best matches each question."
-    )
 
-    for i, answer in enumerate(st.session_state.quiz):
-        options = [answer]
-        for other in st.session_state.quiz:
-            if other != answer:
-                options.append(other)
-            if len(options) == min(4, len(st.session_state.quiz)):
-                break
-
-        options = list(dict.fromkeys(options))
-        st.session_state.quiz_answers[i] = st.radio(
-            f"Question {i + 1}: Which statement appeared in your notes?",
-            options,
-            key=f"quiz_notes_{i}"
-        )
 
     if st.button("Check My Answers", use_container_width=True):
         score = 0
