@@ -122,6 +122,9 @@ if "quiz" in st.session_state:
             f"Question {i + 1}: Which statement is correct?",
             options,
             key=f"quiz_{i}"
+          
+)
+            
  
 if "quiz" in st.session_state:
     st.markdown(f"### Quiz: {st.session_state.quiz_topic}")
