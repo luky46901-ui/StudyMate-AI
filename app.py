@@ -98,11 +98,11 @@ if st.button("Create Practice Quiz", use_container_width=True):
                 "so a practice quiz can be created."
             )
         else:
-        random.seed()
-        selected = random.sample(sentences, min(5, len(sentences)))
-        st.session_state.quiz = selected
-        st.session_state.quiz_topic = quiz_topic
-        st.session_state.quiz_answers = {}
+                random.seed()
+                selected = random.sample(sentences, min(5, len(sentences)))
+                st.session_state.quiz = selected
+                st.session_state.quiz_topic = quiz_topic
+                st.session_state.quiz_answers = {}
 
 if "quiz" in st.session_state:
     st.markdown(f"### Quiz: {st.session_state.quiz_topic}")
