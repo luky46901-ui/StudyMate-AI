@@ -116,7 +116,7 @@ if "quiz" in st.session_state:
             if len(options) >= min(4, len(st.session_state.quiz)):
                 break
 
-        random.shuffle(options)
+        
 
         st.session_state.quiz_answers[i] = st.radio(
             f"Question {i + 1}: Which statement is correct?",
