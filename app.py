@@ -144,7 +144,7 @@ if "quiz" in st.session_state:
         st.session_state.quiz_answers[i] = st.radio(
             f"Question {i + 1}: Which statement appeared in your notes?",
             options,
-            key=f"quiz_{i}"
+            key=f"quiz_notes_{i}"
         )
 
     if st.button("Check My Answers", use_container_width=True):
