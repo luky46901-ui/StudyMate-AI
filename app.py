@@ -122,12 +122,7 @@ if "quiz" in st.session_state:
             f"Question {i + 1}: Which statement is correct?",
             options,
             key=f"quiz_{i}"
-            random.seed(42)
-            selected = sentences[:5]
-            st.session_state.quiz = selected
-            st.session_state.quiz_topic = quiz_topic
-            st.session_state.quiz_answers = {}
-
+ 
 if "quiz" in st.session_state:
     st.markdown(f"### Quiz: {st.session_state.quiz_topic}")
     st.write(
