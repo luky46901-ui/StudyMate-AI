@@ -140,3 +140,17 @@ if "quiz" in st.session_state:
 
 st.divider()
 st.caption("StudyMate AI | Multimodal AI Hackathon 2026")
+# Download quiz review
+if "quiz" in st.session_state and st.session_state.quiz:
+    review = "StudyMate AI - Quiz Review\n\n"
+
+    for i, correct in enumerate(st.session_state.quiz):
+        review += f"Question {i + 1}: {correct}\n\n"
+
+    st.download_button(
+        label="📥 Download Quiz Review",
+        data=review,
+        file_name="studymate_quiz_review.txt",
+        mime="text/plain",
+        use_container_width=True
+    )
