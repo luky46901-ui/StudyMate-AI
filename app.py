@@ -98,8 +98,6 @@ if st.button("Create Practice Quiz", use_container_width=True):
                 "so a practice quiz can be created."
             )
         else:
-           
-    else:
         random.seed()
         selected = random.sample(sentences, min(5, len(sentences)))
         st.session_state.quiz = selected
